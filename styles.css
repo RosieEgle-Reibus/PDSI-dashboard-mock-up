@@ -2,19 +2,71 @@ body {
   font-family: futura, serif;
   background-color: #263746;
   color: #CACACA;
-  
 }
 
-.content-wrapper {
+.container-fluid {
+  max-width: 100vw;
   display: flex;
   flex-direction: column; 
   justify-content: center; 
   align-items: center;
+  background-color: #263746;
+  height: 700px;
+  color: #CACACA;
+
 }
 
 .header {
-   width: 65vw;
+   width: 68vw;
+   display: flex;
+   justify-content: space-between;
 }
+
+p, a {
+  font-family: futura, serif;
+  
+}
+
+a {
+  font-weight: 400;
+}
+
+.projects {
+  color: rgb(65, 143, 222);
+}
+
+p {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 200;
+}
+
+.material-icons.md-17 { 
+  font-size: 17px;
+  margin: 0;
+  padding: 0; }
+
+.nav-wrapper {
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  align-items: center; 
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .header img {
   max-width: 150px;
@@ -25,14 +77,11 @@ body {
 .header  h1 {
   font-family: warnock-pro, serif;
   font-size: 40px;
+  padding: 20px 0 20px 0;
 }
 
-.header  h2 {
-  font-family: warnock-pro, serif;
-  font-size: 32px;
-}
 
-.chart-wrapper {
+.container {
   width: 65vw;
   height: 500px;
   background-color: #fff;
@@ -40,9 +89,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border: solid 2px #263746;
 }
 
-.chart-wrapper h1 {
+.container h1 {
   color: #263746;
   padding-left: 20px;
   font-family: futura, serif;
@@ -51,4 +101,5 @@ body {
 #chartdiv {
   width: 100%;
   height: 400px;
+  font-family: futura, serif;
 }
