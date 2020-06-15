@@ -11,7 +11,7 @@ body {
   justify-content: center; 
   align-items: center;
   background-color: #263746;
-  height: 700px;
+  height: 800px;
   color: #CACACA;
 
 }
@@ -20,6 +20,7 @@ body {
    width: 68vw;
    display: flex;
    justify-content: space-between;
+   margin: 20px 0 75px 0;
 }
 
 p, a {
@@ -80,6 +81,13 @@ p {
   padding: 20px 0 20px 0;
 }
 
+.sub-header{
+  width: 68vw;
+  font-family: warnock-pro, serif;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+}
 
 .container {
   width: 65vw;
@@ -97,6 +105,33 @@ p {
   padding-left: 20px;
   font-family: futura, serif;
 }
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-nav {
+  display: flex;
+  width: 25vw;
+  justify-content: space-evenly;
+  color: rgb(65, 143, 222);
+}
+
+.button {
+  background-color:none;
+  border: 2px solid rgb(65, 143, 222);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.btn {
+  color: rgb(65, 143, 222);
+  font-family: futura, serif;
+}
+
 
 #chartdiv {
   width: 100%;
