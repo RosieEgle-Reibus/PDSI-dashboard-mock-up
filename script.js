@@ -1,6 +1,8 @@
+
 am4core.ready(function() {
 
     // Themes begin
+    am4core.useTheme(am4themes_spiritedaway);
     am4core.useTheme(am4themes_animated);
     // Themes end
     
@@ -41,29 +43,39 @@ am4core.ready(function() {
       "align": true,
     } ];
       
-    chart.radius = am4core.percent(70);
+    //connects data to chart
+    var series = chart.series.push(new am4charts.PieSeries());
+    series.dataFields.value = "dollars";
+    series.dataFields.category = "category";  
+    
+    //creates shape of pie chart
+    chart.radius = am4core.percent(60);
     chart.innerRadius = am4core.percent(30);
     chart.startAngle = 180;
     chart.endAngle = 361; 
      
+    //creates radial gradient
+    var rgm = new am4core.RadialGradientModifier();
+    rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.5);
+    series.slices.template.fillModifier = rgm;
+     
     
-    var series = chart.series.push(new am4charts.PieSeries());
-    series.dataFields.value = "dollars";
-    series.dataFields.category = "category";
-    
-    // series.slices.template.cornerRadius = 10;
-    // series.slices.template.innerCornerRadius = 7;
+    //creates rounded corner raidius
+    series.slices.template.cornerRadius = 10;
+    series.slices.template.innerCornerRadius = 7;
+
+    //mouse interactivity
     series.slices.template.draggable = true;
     series.slices.template.inert = true;
     
+    //aligns labels in columns
     series.alignLabels = "align";
+    series.labels.template.fontSize = 18;
     
-    series.labels.template.fontSize = 20;
-    
-    
-    series.slices.template.cornerRadius = 10;
-    series.slices.template.innerCornerRadius = 7;
-    series.slices.template.propertyFields.fill = "color";
+ 
+      
+      
+    // series.slices.template.propertyFields.fill = "color";
     series.slices.template.stroke = am4core.color("#fff");
     series.slices.template.strokeWidth = 2;
     series.slices.template.strokeOpacity = 1;
@@ -73,6 +85,6 @@ am4core.ready(function() {
     series.hiddenState.properties.startAngle = 90;
     series.hiddenState.properties.endAngle = 90;
     
-    // chart.legend = new am4charts.Legend();
+    
     
     }); // end am4core.ready()
