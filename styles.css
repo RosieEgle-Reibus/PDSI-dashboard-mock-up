@@ -118,7 +118,7 @@ p {
   color: rgb(65, 143, 222);
 }
 
-.button {
+.button-download {
   background-color:none;
   border: 2px solid rgb(65, 143, 222);
   display: flex;
@@ -132,7 +132,12 @@ p {
   font-family: futura, serif;
 }
 
-.cost-button-contianer {
+.button-download:hover {
+  background-color: #CACACA;
+  color: white;
+}
+
+.cost-button-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -156,11 +161,27 @@ p {
   font-family: futura, serif;
 }
 
+.table-container {
+  justify-content: flex-start;
+}
+
 .cost-container {
-  margin-top: 20px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
 }
 
 .table {
   color: #263746;
   font-family: futura, serif;
+  margin: 20px;
+}
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
 }

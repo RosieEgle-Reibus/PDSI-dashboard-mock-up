@@ -1,14 +1,14 @@
 
-am4core.ready(function() {
+am4core.ready(function () {
 
     // Themes begin
     am4core.useTheme(am4themes_spiritedaway);
     am4core.useTheme(am4themes_animated);
     // Themes end
-    
+
     var chart = am4core.create("chartdiv", am4charts.PieChart);
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-      
+
     let currentBudget = 63821448
     let efc = 64332327
     let overage = efc - currentBudget
@@ -16,50 +16,50 @@ am4core.ready(function() {
     let exposure = totalExposure - overage
     let budgetDouble = currentBudget * 2
     let nonOverage = budgetDouble - efc
-    
-    
+
+
     console.log("Overage", overage)
     console.log("Exposure", exposure)
-    
-    chart.data = [ {
-      "category": "Total Commited",
-      "dollars": 60712420,
-      "color": am4core.color("#749D98"),
-      "align": false,
+
+    chart.data = [{
+        "category": "Total Commited",
+        "dollars": 60712420,
+        "color": am4core.color("#749D98"),
+        "align": false,
     }, {
-      "category": "Pending",
-      "dollars": 2662869,
-      "color": am4core.color("#AF805E"),
-      "align": true,
+        "category": "Pending",
+        "dollars": 2662869,
+        "color": am4core.color("#AF805E"),
+        "align": true,
     }, {
-      "category": "Exposure",
-      "dollars": exposure,
-      "color": am4core.color("#F35033"),
-      "align": true,
+        "category": "Exposure",
+        "dollars": exposure,
+        "color": am4core.color("#F35033"),
+        "align": true,
     }, {
-       "category": "Exposure Overage",
-      "dollars": overage,
-      "color": am4core.color("#AA445B"),
-      "align": true,
-    } ];
-      
+        "category": "Exposure Overage",
+        "dollars": overage,
+        "color": am4core.color("#AA445B"),
+        "align": true,
+    }];
+
     //connects data to chart
     var series = chart.series.push(new am4charts.PieSeries());
     series.dataFields.value = "dollars";
-    series.dataFields.category = "category";  
-    
+    series.dataFields.category = "category";
+
     //creates shape of pie chart
     chart.radius = am4core.percent(60);
     chart.innerRadius = am4core.percent(30);
     chart.startAngle = 180;
-    chart.endAngle = 361; 
-     
+    chart.endAngle = 361;
+
     //creates radial gradient
     var rgm = new am4core.RadialGradientModifier();
     rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.5);
     series.slices.template.fillModifier = rgm;
-     
-    
+
+
     //creates rounded corner raidius
     series.slices.template.cornerRadius = 10;
     series.slices.template.innerCornerRadius = 7;
@@ -67,24 +67,37 @@ am4core.ready(function() {
     //mouse interactivity
     series.slices.template.draggable = true;
     series.slices.template.inert = true;
-    
+
     //aligns labels in columns
     series.alignLabels = "align";
     series.labels.template.fontSize = 18;
-    
- 
-      
-      
+
+
+
+
     // series.slices.template.propertyFields.fill = "color";
     series.slices.template.stroke = am4core.color("#fff");
     series.slices.template.strokeWidth = 2;
     series.slices.template.strokeOpacity = 1;
-    
-    
-      
+
+
+
     series.hiddenState.properties.startAngle = 90;
     series.hiddenState.properties.endAngle = 90;
-    
-    
-    
-    }); // end am4core.ready()
+
+
+
+}); // end am4core.ready()
+
+let toggleCostTable = () => {
+    console.log("working")
+    let element = document.getElementById("toggleContainer")
+    console.log(element.classList[2])
+    if (element.classList[2] === 'invisible') {
+        console.log("true")
+        element.classList.remove('invisible')
+    }
+    else {
+        element.classList.add('invisible')
+    }
+}

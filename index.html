@@ -43,7 +43,7 @@
                         </i>
                         <a>Scope</a>
                     </div>
-                    <div class="button">
+                    <div class="button-download">
                         <button type="button" class="btn">
                             <i class="material-icons md-17">system_update_alt
                             </i>
@@ -52,14 +52,15 @@
                 </div>
             </div>
             <div id="chartdiv"></div>
-            <div class="cost-button-contianer">
-            <button type="button" class="btn cost-button">See Cost Breakdown</button>
+            <div class="cost-button-container">
+            <button type="button" class="btn cost-button" onClick="toggleCostTable()">See Cost Breakdown</button>
         </div>
         </div>
 
     </div>
-    <div class="container-fluid">
-        <div class="container cost-container">
+    <div class="container-fluid table-container">
+        <div id="toggleContainer" class="container cost-container invisible">
+            <h1>Monthly Finaincial Report</h1>
             <table class="table table-sm">
                 <thead>
                   <tr>
