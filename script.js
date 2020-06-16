@@ -89,15 +89,48 @@ am4core.ready(function () {
 
 }); // end am4core.ready()
 
+let smoothScroll = (target, duration) => {
+    var target = document.querySelector(target)
+    let targetPosition = target.getBoundingClientRect().top
+    let startPosition = window.pageYOffset
+    let distance = targetPosition - startPosition
+    let startTime =  null
+
+    let ease = (t, b, c, d) => {
+        t /= d/2;
+        if (t < 1) return c/2*t*t*t + b;
+        t -= 2;
+        return c/2*(t*t*t + 2) + b;
+    }
+
+    let animation = (currentTime) => {
+        if(startTime === null) startTime = currentTime
+        let timeElapsed = currentTime - startTime 
+        let run = ease(timeElapsed, startPosition, distance,  duration)
+        window.scrollTo(0, run)
+        console.log("working")
+        if(timeElapsed < duration) requestAnimationFrame(animation)
+        
+   } 
+
+  
+
+   requestAnimationFrame(animation)
+
+}
+
 let toggleCostTable = () => {
     console.log("working")
     let element = document.getElementById("toggleContainer")
-    console.log(element.classList[2])
     if (element.classList[2] === 'invisible') {
-        console.log("true")
         element.classList.remove('invisible')
+        smoothScroll('.cost-container', 1000)
     }
     else {
         element.classList.add('invisible')
     }
 }
+
+
+
+
