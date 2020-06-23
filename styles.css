@@ -185,3 +185,32 @@ p {
 .invisible {
   visibility: hidden;
 }
+
+
+.column-wrapper {
+  width: 65vw;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.row {
+  width: 90vw;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tr {
+ text-align: right;
+}
+
+.section-box {
+  width: 30%;
+  height: 200px;
+  background-color:  #fff;
+}
+
+

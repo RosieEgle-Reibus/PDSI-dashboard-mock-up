@@ -113,10 +113,7 @@ let smoothScroll = (target, duration) => {
         
    } 
 
-  
-
    requestAnimationFrame(animation)
-
 }
 
 let toggleCostTable = () => {
