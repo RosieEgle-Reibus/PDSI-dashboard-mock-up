@@ -91,7 +91,7 @@ p {
 
 .container {
   width: 65vw;
-  height: 600px;
+  height: 550px;
   background-color: #fff;
   border-radius: 10px;
   display: flex;
@@ -109,7 +109,7 @@ p {
 .container-header {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
 .container-nav {
@@ -144,9 +144,7 @@ p {
   color: white;
 }
 
-
 .chartdiv {
-  margin-top: 20px;
   width: 100%;
   height: 500px;
   font-family: futura, serif;
@@ -157,6 +155,44 @@ p {
 .chartdiv img {
   max-width: 100%;
   max-height: 100%;
+}
+
+
+
+.commited  {
+  position: absolute;
+  left: 700px;
+  bottom: 400px;
+  width: 150px;
+  height: 100px;
+  color: none;
+  
+}
+
+.commited a {
+  width: 200px;
+  height: 100px;
+  color: transparent;
+  font-size: 48px;
+}
+
+.commited a:hover {
+  color: transparent;
+}
+
+
+
+.exposure {
+  position: absolute;
+}
+
+
+.pending {
+  position: absolute;
+}
+
+.exposure-overage {
+  position: absolute;
 }
 
 .table-container {

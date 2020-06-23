@@ -128,6 +128,23 @@ let toggleCostTable = () => {
     }
 }
 
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+
+
+// function myEnterFunction() {
+//     console.log("in function")
+//     let element = document.getElementById("commited")
+//     if (element.style.visibility = "hidden") {
+//         element.style.visibility = "visible"
+//     }
+//     document.getElementById("commited").style.backgroundColor = "#000"
+//     document.getElementById("commited").style.color = "#fff"
+
+
+//   }
+
 
 
 
