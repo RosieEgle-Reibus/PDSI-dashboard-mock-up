@@ -161,18 +161,16 @@ p {
 
 .commited  {
   position: absolute;
-  left: 675px;
-  bottom: 400px;
-  width: 150px;
-  height: 100px;
+  left: 550px;
+  bottom: 350px;
+  width: 250px;
+  height: 150px;
   text-align: center;
 }
 
 .commited a {
-  width: 200px;
-  height: 100px;
   color: transparent;
-  font-size: 48px;
+  font-size: 100px;
 }
 
 .commited a:hover {
@@ -181,14 +179,16 @@ p {
 
 .pending {
   position: absolute;
-  bottom: 260px;
-  right: 650px;
-  width: 50px;
-  height: 20px;
+  bottom: 235px;
+  right: 690px;
+  width: 75px;
+  height: 30px;
+  text-align: center;
 }
 
 .pending a {
   color: transparent;
+  font-size: 30px;
 }
 
 .pending a:hover {
@@ -197,18 +197,19 @@ p {
 
 .exposure {
   position: absolute;
-  bottom: 235px;
-  right: 640px;
+  bottom: 210px;
+  right: 685px;
   width: 50px;
   height: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .exposure a {
   color: transparent;
-  font-size: 10px;
+  font-size: 18px;
 }
 
 .exposure a:hover {
@@ -217,19 +218,21 @@ p {
 
 .exposure-overage {
   position: absolute;
-  bottom: 220px;
-  right: 640px;
+  bottom: 185px;
+  right: 685px;
   width: 50px;
   height: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .exposure-overage a {
   color: transparent;
-  font-size: 8px;
+  font-size: 18px;
+
 }
 
 .exposure-overage a:hover {
