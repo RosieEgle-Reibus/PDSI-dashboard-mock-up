@@ -109,7 +109,7 @@ p {
 .container-header {
   display: flex;
   justify-content: space-between;
-  margin-top: 75px;
+  margin-top: 30px;
 }
 
 .container-nav {
@@ -131,6 +131,7 @@ p {
 .btn {
   color: rgb(65, 143, 222);
   font-family: futura, serif;
+  background-color: white;
 }
 
 .button-download:hover {
@@ -154,15 +155,20 @@ p {
 }
 
 .chartdiv img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 75%;
+  margin-top: 20px;
+  /* max-height: 90%; */
 }
 
 
-.commited  {
+.table-container img {
+  max-width: 100%;
+}
+
+/* .commited  {
   position: absolute;
-  left: 550px;
-  bottom: 350px;
+  left: 630px;
+  bottom: 300px;
   width: 250px;
   height: 150px;
   text-align: center;
@@ -179,7 +185,7 @@ p {
 
 .pending {
   position: absolute;
-  bottom: 235px;
+  bottom: 260px;
   right: 690px;
   width: 75px;
   height: 30px;
@@ -197,7 +203,7 @@ p {
 
 .exposure {
   position: absolute;
-  bottom: 210px;
+  bottom: 230px;
   right: 685px;
   width: 50px;
   height: 10px;
@@ -218,7 +224,7 @@ p {
 
 .exposure-overage {
   position: absolute;
-  bottom: 185px;
+  bottom: 210px;
   right: 685px;
   width: 50px;
   height: 10px;
@@ -237,7 +243,7 @@ p {
 
 .exposure-overage a:hover {
   color: transparent;
-}
+} */
 
 .table-container {
   justify-content: flex-start;
@@ -264,30 +270,6 @@ p {
   visibility: hidden;
 }
 
-span {
-  margin-right: 25px;
-  font-weight: 600;
-}
-
-.span-short {
-  margin-right: 35px;
-}
-
-.span-big {
-  margin-right: 20px;
-}
-
-.span-special {
-  margin-right: 40px;
-}
-
-.span-weird {
-  margin-right: 30px;
-}
-
-.span-long {
-  margin-right: 10px;
-}
 
 
 .column-wrapper {
@@ -305,17 +287,16 @@ table {
 .align-right {
   text-align: left;
 }
-
-/* th {
+th {
  text-align: center;
 }
 
-td {
-  text-align: right;
-  padding-right: 30px;
- } */
 
 
+ span {
+  font-weight: 600;
+  /* text-align: left; */
+}
 
 
 .section-box {
